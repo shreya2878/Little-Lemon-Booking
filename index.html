@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Little Lemon Chicago | Authentic Mediterranean Bistro & Table Booking</title>
+    <meta name="description" content="Book your table at Little Lemon Chicago, a family-owned Mediterranean restaurant serving traditional recipes with a modern twist. Enjoy Greek salad, bruschetta, and lemon dessert.">
+    <meta name="keywords" content="Little Lemon, Mediterranean Restaurant, Chicago Bistro, Table Booking, Reserve Table, Greek Salad, Bruschetta">
+    <meta name="author" content="Meta Capstone Front-End Developer">
+    
+    <!-- Open Graph Metadata (Social Sharing) -->
+    <meta property="og:title" content="Little Lemon Chicago | Table Booking">
+    <meta property="og:description" content="Reserve a table online at Chicago's favorite Mediterranean bistro. Family recipes served with a modern twist.">
+    <meta property="og:image" content="assets/interior.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo-link" onclick="navigateTo('home')">
+                <img src="assets/logo.svg" alt="Little Lemon Logo" class="logo" id="header-logo">
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" id="nav-home" class="active" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#" id="nav-menu-specials" onclick="scrollToSection('specials')">Menu</a></li>
+                    <li><a href="#" id="nav-booking" onclick="navigateTo('booking')">Book a Table</a></li>
+                    <li><a href="#" id="nav-my-bookings" onclick="navigateTo('my-bookings')">My Bookings</a></li>
+                    <li><a href="#" id="nav-about" onclick="scrollToSection('about')">About</a></li>
+                    <li><a href="#" id="nav-contact" onclick="scrollToSection('footer')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- HOME SECTION (SPA TAB) -->
+        <section id="section-home" class="page-section">
+            
+            <!-- Hero Banner -->
+            <div class="hero-bg">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <h1>Little Lemon</h1>
+                        <h2>Chicago</h2>
+                        <p class="hero-description">
+                            We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
+                        </p>
+                        <button class="btn btn-primary" id="hero-reserve-btn" onclick="navigateTo('booking')">
+                            Reserve a Table
+                        </button>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/interior.png" alt="Little Lemon Bistro Cozy Seating" class="hero-image" id="hero-interior-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specials Section -->
+            <section id="specials" class="container specials-section">
+                <div class="specials-header">
+                    <h2>This Weeks Specials!</h2>
+                    <button class="btn btn-secondary" id="specials-menu-btn" onclick="alert('Our full online menu is coming soon! Feel free to book a table to try these specials.')">Online Menu</button>
+                </div>
+                
+                <div class="specials-grid">
+                    <!-- Special Card 1 -->
+                    <article class="special-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/greek_salad.png" alt="Greek Salad" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-price">
+                                <h3>Greek Salad</h3>
+                                <span class="card-price">$12.99</span>
+                            </div>
+                            <p class="card-desc">
+                                The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.
+                            </p>
+                            <a href="#" class="delivery-link" onclick="alert('Delivery ordering is under construction. Reserve a table online to enjoy this dish!')">
+                                Order a delivery <i class="fa-solid fa-motorcycle"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Special Card 2 -->
+                    <article class="special-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/bruschetta.png" alt="Bruschetta" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-price">
+                                <h3>Bruschetta</h3>
+                                <span class="card-price">$5.99</span>
+                            </div>
+                            <p class="card-desc">
+                                Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with delicious fresh tomatoes.
+                            </p>
+                            <a href="#" class="delivery-link" onclick="alert('Delivery ordering is under construction. Reserve a table online to enjoy this dish!')">
+                                Order a delivery <i class="fa-solid fa-motorcycle"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Special Card 3 -->
+                    <article class="special-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets/lemon_dessert.png" alt="Lemon Dessert" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-price">
+                                <h3>Lemon Dessert</h3>
+                                <span class="card-price">$5.00</span>
+                            </div>
+                            <p class="card-desc">
+                                This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined. Delightfully zesty.
+                            </p>
+                            <a href="#" class="delivery-link" onclick="alert('Delivery ordering is under construction. Reserve a table online to enjoy this dish!')">
+                                Order a delivery <i class="fa-solid fa-motorcycle"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-bg">
+                <div class="container testimonials-section">
+                    <h2>Testimonials</h2>
+                    
+                    <div class="testimonials-grid">
+                        <!-- Review 1 -->
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">S</div>
+                                <div>
+                                    <h4 class="reviewer-name">Sara L.</h4>
+                                    <span class="reviewer-handle">@saral_chicago</span>
+                                </div>
+                            </div>
+                            <p class="review-text">"The Greek salad was exceptionally fresh, and booking online was a breeze!"</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">M</div>
+                                <div>
+                                    <h4 class="reviewer-name">Mark R.</h4>
+                                    <span class="reviewer-handle">@mark_eats_out</span>
+                                </div>
+                            </div>
+                            <p class="review-text">"Authentic atmosphere and wonderful lemon tart. Mario and Adrian's bistro is a gem!"</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">E</div>
+                                <div>
+                                    <h4 class="reviewer-name">Elena K.</h4>
+                                    <span class="reviewer-handle">@elena_foodie</span>
+                                </div>
+                            </div>
+                            <p class="review-text">"Wonderful customer service. They arranged outdoor seating perfectly for our anniversary."</p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">J</div>
+                                <div>
+                                    <h4 class="reviewer-name">John D.</h4>
+                                    <span class="reviewer-handle">@johnd_chicago</span>
+                                </div>
+                            </div>
+                            <p class="review-text">"I loved the Bruschetta. The overlapping garden seating options are beautiful."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section (Mario & Adrian) -->
+            <section id="about" class="container about-section">
+                <div class="about-content">
+                    <h2>Little Lemon</h2>
+                    <h3>Chicago</h3>
+                    <p class="about-text">
+                        Little Lemon was founded by two Italian-Greek chefs and long-time friends, Mario and Adrian, who immigrated to Chicago to share their family culinary secrets. 
+                    </p>
+                    <p class="about-text">
+                        With over two decades of combined kitchen experience, they blend traditional olive oils, fresh seafood, and Mediterranean spices with modern cooking techniques, creating an unforgettable bistro dining experience right in the heart of the Midwest.
+                    </p>
+                </div>
+                <div class="about-images-wrapper">
+                    <!-- Dynamic overlapping images of the founders -->
+                    <img src="assets/mario_and_adrian.png" alt="Mario and Adrian in the kitchen" class="about-img img-back" id="about-img-back">
+                    <img src="assets/interior.png" alt="Little Lemon Bistro Patio" class="about-img img-front" id="about-img-front">
+                </div>
+            </section>
+        </section>
+
+        <!-- BOOKING FLOW SECTION (SPA TAB) -->
+        <section id="section-booking" class="page-section hidden">
+            <div class="booking-header-bg">
+                <div class="container text-center">
+                    <h2>Book a Table</h2>
+                    <p>Experience the finest Mediterranean cuisine. Complete the forms below to reserve your space.</p>
+                </div>
+            </div>
+
+            <div class="container booking-container">
+                <!-- Multistep Progress Bar -->
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-steps">
+                        <li class="step-active" id="progress-step-1"><span class="step-number">1</span> Details</li>
+                        <li id="progress-step-2"><span class="step-number">2</span> Table Map</li>
+                        <li id="progress-step-3"><span class="step-number">3</span> Contact</li>
+                    </ul>
+                </div>
+
+                <!-- Form Card Wrapper -->
+                <div class="booking-card">
+                    
+                    <!-- STEP 1: Details Selector -->
+                    <div id="booking-step-details" class="booking-step-panel">
+                        <h3>1. Reservation Details</h3>
+                        <form id="booking-details-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="res-date">Choose date <span class="required">*</span></label>
+                                    <input type="date" id="res-date" name="res-date" required>
+                                    <span class="error-message" id="date-error">Please select a future date.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="res-time">Choose time <span class="required">*</span></label>
+                                    <select id="res-time" name="res-time" required>
+                                        <option value="" disabled selected>Select a date first</option>
+                                    </select>
+                                    <span class="error-message" id="time-error">Please select a time slot.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="guests">Number of guests <span class="required">*</span></label>
+                                    <input type="number" placeholder="1" min="1" max="10" id="guests" name="guests" required>
+                                    <span class="error-message" id="guests-error">Please choose between 1 and 10 guests.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="occasion">Occasion</label>
+                                    <select id="occasion" name="occasion">
+                                        <option value="None" selected>None / Regular Dining</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Engagement">Engagement</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label>Seating Preference</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="seating" value="Indoor" checked>
+                                            <span class="custom-radio"></span> Indoor Dining Room
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="seating" value="Outdoor">
+                                            <span class="custom-radio"></span> Outdoor Patio Garden
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="seating" value="Bar">
+                                            <span class="custom-radio"></span> High-top Bar Counter
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" onclick="proceedToStep2()">
+                                    Select Table <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- STEP 2: Visual Table Selector -->
+                    <div id="booking-step-table" class="booking-step-panel hidden">
+                        <div class="panel-header-back">
+                            <button class="back-link" onclick="goBackToStep1()"><i class="fa-solid fa-arrow-left"></i> Adjust Details</button>
+                            <h3>2. Select Your Preferred Table</h3>
+                        </div>
+                        <p class="seating-legend-desc">Click an available table matching your party size. Yellow tables match your party size, grey are reserved, and green is your selection.</p>
+                        
+                        <!-- Map Legend -->
+                        <div class="legend-container">
+                            <div class="legend-item"><span class="legend-box available-box"></span> Available (Matching Size)</div>
+                            <div class="legend-item"><span class="legend-box standard-box"></span> Available (Other Size)</div>
+                            <div class="legend-item"><span class="legend-box selected-box"></span> Your Selection</div>
+                            <div class="legend-item"><span class="legend-box reserved-box"></span> Reserved</div>
+                        </div>
+
+                        <!-- Restaurant Table Floor Grid -->
+                        <div class="restaurant-floor-plan">
+                            <div class="floor-stage">BISTRO STAGE / PIANO</div>
+                            
+                            <!-- Visual grid representing Indoor / Outdoor / Bar tables -->
+                            <div class="tables-grid" id="seating-tables-grid">
+                                <!-- Tables dynamically loaded by JS based on selection -->
+                            </div>
+                        </div>
+
+                        <div class="selected-table-summary" id="table-summary-info">
+                            Please select a table to proceed.
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="goBackToStep1()">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn-to-step3" onclick="proceedToStep3()" disabled>
+                                Enter Guest Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Guest Details Form -->
+                    <div id="booking-step-guest" class="booking-step-panel hidden">
+                        <div class="panel-header-back">
+                            <button class="back-link" onclick="goBackToStep2()"><i class="fa-solid fa-arrow-left"></i> Change Table</button>
+                            <h3>3. Contact Information</h3>
+                        </div>
+                        <form id="booking-guest-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="first-name">First Name <span class="required">*</span></label>
+                                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                                    <span class="error-message" id="first-name-error">First name is required.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="last-name">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                                    <span class="error-message" id="last-name-error">Last name is required.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                                    <span class="error-message" id="email-error">Please enter a valid email address.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                                    <span class="error-message" id="phone-error">Please enter a 10-digit phone number.</span>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="comments">Special Requests (Optional)</label>
+                                    <textarea id="comments" name="comments" rows="3" placeholder="Dietary restrictions, high chair for kids, quiet table..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="terms-checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agree-terms" required>
+                                    <span class="custom-checkbox"></span> I agree to receive booking confirmation and updates via email/SMS. <span class="required">*</span>
+                                </label>
+                                <span class="error-message" id="terms-error">You must agree to the terms.</span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="goBackToStep2()">Back</button>
+                                <button type="submit" class="btn btn-primary" id="btn-submit-booking">
+                                    Confirm Reservation <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MY BOOKINGS DASHBOARD SECTION (SPA TAB) -->
+        <section id="section-my-bookings" class="page-section hidden">
+            <div class="dashboard-header-bg">
+                <div class="container text-center">
+                    <h2>My Reservations</h2>
+                    <p>Manage your upcoming and past bookings at Little Lemon Chicago.</p>
+                </div>
+            </div>
+
+            <div class="container dashboard-container">
+                <div class="dashboard-card">
+                    <div class="dashboard-tabs">
+                        <button class="dash-tab-btn active" id="tab-upcoming" onclick="switchDashboardTab('upcoming')">Upcoming Bookings</button>
+                        <button class="dash-tab-btn" id="tab-past" onclick="switchDashboardTab('past')">Past History</button>
+                    </div>
+
+                    <!-- Bookings Container -->
+                    <div class="bookings-list-wrapper" id="bookings-list-container">
+                        <!-- Dynamic content injected by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOOKING CONFIRMATION MODAL -->
+    <div class="modal-overlay hidden" id="confirmation-modal">
+        <div class="modal-card">
+            <button class="close-modal" id="close-confirm-modal" aria-label="Close confirmation">&times;</button>
+            <div class="modal-header">
+                <div class="success-icon-wrapper">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Reservation Confirmed!</h2>
+                <p>We look forward to serving you, <span id="conf-guest-name">Guest</span>.</p>
+            </div>
+            
+            <!-- Reservation Ticket -->
+            <div class="ticket-card">
+                <div class="ticket-top">
+                    <div class="ticket-brand">
+                        <img src="assets/logo.svg" alt="Little Lemon" class="ticket-logo">
+                        <span class="ticket-title">TABLE PASS</span>
+                    </div>
+                    <div class="ticket-ref">
+                        <span class="ref-label">RESERVATION REF</span>
+                        <span class="ref-code" id="conf-ref-code">LL-938210</span>
+                    </div>
+                </div>
+                <div class="ticket-divider">
+                    <div class="notch left-notch"></div>
+                    <div class="dashed-line"></div>
+                    <div class="notch right-notch"></div>
+                </div>
+                <div class="ticket-details">
+                    <div class="detail-row">
+                        <div class="detail-col">
+                            <span class="detail-label">DATE</span>
+                            <span class="detail-val" id="conf-date">Oct 12, 2026</span>
+                        </div>
+                        <div class="detail-col">
+                            <span class="detail-label">TIME</span>
+                            <span class="detail-val" id="conf-time">7:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-col">
+                            <span class="detail-label">GUESTS</span>
+                            <span class="detail-val" id="conf-guests">4 People</span>
+                        </div>
+                        <div class="detail-col">
+                            <span class="detail-label">TABLE</span>
+                            <span class="detail-val" id="conf-table">Table 5 (Indoor)</span>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-col">
+                            <span class="detail-label">OCCASION</span>
+                            <span class="detail-val" id="conf-occasion">Birthday</span>
+                        </div>
+                        <div class="detail-col">
+                            <span class="detail-label">SEATING</span>
+                            <span class="detail-val" id="conf-seating">Indoor Seating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-footer">
+                    <div class="ticket-qr-container">
+                        <!-- Simulated QR Code -->
+                        <div class="qrcode-wrapper" id="qrcode-canvas-mock">
+                            <!-- QR code lines drawn via custom border/grid -->
+                            <div class="qr-box">
+                                <div class="qr-corner top-left"></div>
+                                <div class="qr-corner top-right"></div>
+                                <div class="qr-corner bottom-left"></div>
+                                <div class="qr-inner-dots"></div>
+                            </div>
+                        </div>
+                        <span class="qr-hint">Scan at arrival</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="window.print()">Print Ticket</button>
+                <button class="btn btn-primary" onclick="closeConfirmationAndGoHome()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="footer">
+        <div class="container footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/logo.svg" alt="Little Lemon Large Logo" class="footer-logo">
+            </div>
+            
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#" onclick="scrollToSection('specials')">Menu</a></li>
+                    <li><a href="#" onclick="navigateTo('booking')">Book a Table</a></li>
+                    <li><a href="#" onclick="navigateTo('my-bookings')">My Bookings</a></li>
+                    <li><a href="#" onclick="scrollToSection('about')">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <address class="footer-address">
+                    <p><i class="fa-solid fa-map-location-dot"></i> 821 S. Michigan Ave, Chicago, IL 60605</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (312) 555-0199</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@littlelemon.com</p>
+                </address>
+            </div>
+
+            <div class="footer-col">
+                <h3>Social Media</h3>
+                <ul class="social-links">
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Little Lemon Chicago. All rights reserved. Meta Front-End Capstone Project.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
