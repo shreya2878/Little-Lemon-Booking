@@ -46,9 +46,6 @@ git clone https://github.com/shreya2878/Little-Lemon-Booking.git
 - Improved HTML, CSS, and JavaScript skills
 - Learned responsive web design principles
 
-## Screenshots
-
-Add screenshots of the home page and booking page here.
 
 ## Author
 
